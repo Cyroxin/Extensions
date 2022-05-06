@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Extensions.template;
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Extensions.src.Novel.WlnUpdates
 {
-	public class WlnUpdates
+	public class WlnUpdates : Extension
 	{
 		static HttpClient client = new HttpClient();
 
