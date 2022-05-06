@@ -18,6 +18,8 @@ namespace Extensions.src.Novel.WlnUpdates
 
 		static string apiUrl = "https://www.wlnupdates.com/api";
 
+		public int version { get => 1; }
+
 		public WlnUpdates()
 		{
 			client.DefaultRequestHeaders.Host = "www.wlnupdates.com";

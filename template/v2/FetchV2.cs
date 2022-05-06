@@ -4,6 +4,6 @@ namespace Extensions.template.v2
 {
 	public interface FetchV2
 	{
-		public static int fetchResult = 2;
+		public int fetchResult { get; }
 	}
 }
