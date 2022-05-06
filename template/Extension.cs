@@ -5,6 +5,6 @@ namespace Extensions.template
 {
 	public interface Extension
 	{
-		int version { get; }
+		public int version { get; }
 	}
 }
