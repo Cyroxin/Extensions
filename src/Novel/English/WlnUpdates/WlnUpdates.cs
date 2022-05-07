@@ -1,7 +1,6 @@
 ﻿using Extensions.template;
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
