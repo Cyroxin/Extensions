@@ -1,4 +1,4 @@
-﻿using Extensions.template;
+﻿using Extensions.template.Novel.Extension;
 using System;
 using System.Collections.Generic;
 using System.Linq;
