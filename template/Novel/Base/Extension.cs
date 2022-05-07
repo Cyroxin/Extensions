@@ -1,7 +1,7 @@
 ﻿#define EXTENSIONV1
 
 
-namespace Extensions.template
+namespace Extensions.template.Novel.Extension
 {
 	public interface Extension
 	{
