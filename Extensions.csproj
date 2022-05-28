@@ -10,4 +10,10 @@
     <PackageReference Include="System.Text.Json" Version="6.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Src\Novel\English\WlnUpdates\WlnUpdates.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>

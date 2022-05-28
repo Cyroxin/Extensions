@@ -1,4 +1,4 @@
-﻿using Extensions.template.Novel.Extension;
+﻿using Extensions.Templates.Novel.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Extensions.src.Novel.WlnUpdates
+namespace Extensions.Src.Novel.WlnUpdates
 {
 	public class WlnUpdates : Extension
 	{

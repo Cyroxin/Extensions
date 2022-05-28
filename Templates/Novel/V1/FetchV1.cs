@@ -1,6 +1,6 @@
 ﻿#define FetchV1
 
-namespace Extensions.template.v1
+namespace Extensions.Templates.V1
 {
 	public interface FetchV1
 	{
