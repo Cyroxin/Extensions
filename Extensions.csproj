@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Srca\Novel\English\WlnUpdates\WlnUpdates.cs">
+    <Compile Update="Src\Novel\English\WlnUpdates\WlnUpdates.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
