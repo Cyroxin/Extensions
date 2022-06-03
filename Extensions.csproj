@@ -16,4 +16,12 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Templates\Nonvisual\DataExtension\" />
+    <Folder Include="Templates\Nonvisual\Shared\" />
+    <Folder Include="Templates\Visual\Manga\" />
+    <Folder Include="Templates\Visual\Anime\" />
+    <Folder Include="Templates\Visual\Novel\" />
+  </ItemGroup>
+
 </Project>
