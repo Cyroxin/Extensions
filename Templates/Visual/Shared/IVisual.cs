@@ -6,7 +6,7 @@ namespace Extensions.Templates.Visual.Shared
 {
 	public interface IVisual
 	{
-		public string Name { get; }
-		public Uri Cover { get; }
+		public string Name { get; set; }
+		public Uri Cover { get; set; }
 	}
 }

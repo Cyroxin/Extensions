@@ -11,7 +11,6 @@ using System.Reflection;
 
 using Extensions.Templates.Visual.Shared;
 
-[assembly: AssemblyVersion("1.0.0")]
 
 namespace Extensions.Src.Novel.WlnUpdates
 {
