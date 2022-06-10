@@ -1,13 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Net.Http;
-using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Collections.Generic;
-using System.Reflection;
 
 using Extensions.Templates.Visual.Shared;
 
@@ -121,31 +119,13 @@ namespace Extensions.Src.Novel.WlnUpdates
 			return novels.ToArray();
 		}
 
-		async void getDetail(object id)
-		{
-			var json = new
-			{
-				mode = "get-series-id",
-				id = id,
-			};
-
-			var resp = await Fetch(json);
-		}
-
-		static async Task<Stream> Fetch<T>(T json)
+		static async Task<Stream> Fetch(string jsonparam)
 		{
 			try
 			{
-				if (typeof(T) == typeof(string))
-				{
-					var resp = await client.PostAsync(apiUrl, new StringContent(content: (string)(object)json, Encoding.UTF8, "application/json"));
-					return await resp.Content.ReadAsStreamAsync();
-				}
-				else
-				{
-					var resp = await client.PostAsync(apiUrl, JsonContent.Create(json));
-					return await resp.Content.ReadAsStreamAsync();
-				}
+				var resp = await client.PostAsync(apiUrl, new StringContent(content: jsonparam, Encoding.UTF8, "application/json"));
+				return await resp.Content.ReadAsStreamAsync();
+
 			}
 			catch (Exception err)
 			{
