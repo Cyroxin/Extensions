@@ -12,6 +12,7 @@ using AngleSharp;
 using AngleSharp.Dom;
 using AngleSharp.Io;
 using AngleSharp.Html.Dom;
+using AngleSharp.Io.Network;
 
 namespace Extensions.Src.Manga.Batoto
 {
@@ -19,16 +20,22 @@ namespace Extensions.Src.Manga.Batoto
 	{
 		public static string baseurl = "https://bato.to/";
 
+		public static HttpClient client = new HttpClient();
+
 		public int version { get => 1; }
+
+		static Batoto()
+		{
+			var useragent = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Mobile Safari/537.36 Edg/101.0.1210.39";
+			client.DefaultRequestHeaders.Add("User-Agent", useragent);
+		}
 
 		public async Task<IVisual[]> GetVisuals()
 		{
 			List<BatotoManga> manga = new List<BatotoManga>();
-			var requester = new DefaultHttpRequester();
-			requester.Headers["User-Agent"] = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Mobile Safari/537.36 Edg/101.0.1210.39";
 
 			var config = Configuration.Default
-			.With(requester)
+			.With(new HttpClientRequester())
 			.WithDefaultLoader()
 			.WithJs();
 
