@@ -35,7 +35,7 @@ namespace Extensions.Src.Manga.Batoto
 			List<BatotoManga> manga = new List<BatotoManga>();
 
 			var config = Configuration.Default
-			.With(new HttpClientRequester())
+			.With(new HttpClientRequester(client))
 			.WithDefaultLoader()
 			.WithJs();
 
